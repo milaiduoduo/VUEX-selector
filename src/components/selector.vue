@@ -20,6 +20,7 @@
       }
     },
     created(){
+      // 采用提交action的方式获取http异步数据
       this.$store.dispatch('getListAction');
     }
   }
