@@ -4,28 +4,8 @@
   </ul>
 </template>
 <script type='text/ecmascript-6'>
-  let listData = [{
-    title: 'es6'
-  }, {
-    title: 'css3'
-  }, {
-    title: 'html5'
-  }, {
-    title: 'vue'
-  }, {
-    title: 'node'
-  }, {
-    title: 'koa'
-  }, {
-    title: 'webpack'
-  }];
-
   export default{
-    data(){
-      return {
-        listData
-      }
-    },
+    props: ['listData'],
     methods: {
       changeItem(title){
         this.$store.commit('changeListTitle', {title})
@@ -42,8 +22,10 @@
     background: deepskyblue;
     color: #fff;
     cursor: pointer;
-    li{
-      &:hover{background: #0082AB;}
+    li {
+      &:hover {
+        background: #0082AB;
+      }
     }
   }
 </style>
